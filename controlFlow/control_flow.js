@@ -5,6 +5,8 @@ let userMessage;
 let userType = "subscriber";
 let userCategory;
 let isAuthenticated = true;
+let dietaryServicesRole = "enrolled";
+let isAuthorized = true;
 
 // Check user role
 if (userRole === "admin") {
@@ -51,3 +53,24 @@ console.log("User Category:", userCategory);
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+// Dietary Services Program
+
+switch (dietaryServicesRole) {
+    case "employees":
+        isAuthorized = "Full access to Dietary Services";
+        break;
+    case "enrolled":
+        isAuthorized = "Full access to Dietary Services and one-to-one interaction with a dietrician."
+        break;
+    case "subscriber":
+        isAuthorized = "Partial access to Dietary Services only";
+        break;
+    case "non-subscriber":
+        isAuthorized = "Need to enroll or subscribe to use this services";
+        break;
+    default:
+        isAuthorized = "Unknown";
+}
+
+console.log("Authorization Status:", isAuthorized)
