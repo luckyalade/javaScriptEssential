@@ -4,6 +4,7 @@ let isLoggedIn = true;
 let userMessage;
 let userType = "subscriber";
 let userCategory;
+let isAuthenticated = true;
 
 // Check user role
 if (userRole === "admin") {
@@ -44,3 +45,9 @@ switch (userType) {
 }
 
 console.log("User Category:", userCategory);
+
+// check user authentication
+
+let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
+
+console.log("Authentication Status:", authenticationStatus);
