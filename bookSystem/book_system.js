@@ -20,26 +20,6 @@ function addBook() {
     }
 }
 
-function updateBook() {
-    const bookName = document.getElementById('bookName').value;
-    const authorName = document.getElementById('authorName').value;
-    const bookDescription = document.getElementById('bookDescription').value;
-    const pagesNumber = parseInt(document.getElementById('pagesNumber').value);
-    if (bookName && authorName && bookDescription && !isNaN(pagesNumber)) {
-        const updatedBook = {
-            name: bookName,
-            authorName: authorName,
-            bookDescription: bookDescription,
-            pagesNumber: pagesNumber
-        };
-        books.push(updatedBook);
-        showbooks();
-        clearInputs();
-    } else {
-        alert('Please fill in all fields correctly.');
-    }
-}
-
 
 function showbooks() {
     const booksDiv = books.map((book, index) => `<h1>Book Number: ${index + 1}</h1>
@@ -66,7 +46,7 @@ function editbook(index) {
     document.getElementById('bookDescription').value = editBooks.bookDescription;
     document.getElementById('pagesNumber').value = editBooks.pagesNumber;
 
-    books.slice(index,1);
+    books.splice(index,1);
     showbooks();
 }
 
