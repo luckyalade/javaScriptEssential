@@ -1,0 +1,33 @@
+{
+    "articles": [
+      {
+        "title": "Breaking News: Global Event",
+        "description": "In a surprising turn of events, a global summit has been announced to address critical issues affecting nations worldwide.",
+        "category": "Breaking",
+        "author": "John Doe",
+        "published_at": "2024-02-05T10:30:00Z"
+      },
+      {
+        "title": "Technology Advancements: AI Takes Center Stage",
+        "description": "The latest advancements in artificial intelligence have captivated the tech industry, with experts predicting a revolutionary impact on various sectors...",
+        "category": "Technology",
+        "author": "Jane Smith",
+        "published_at": "2024-02-05T12:45:00Z"
+      },
+      {
+        "title": "Health and Wellness: New Study Reveals Surprising Benefits of Chocolate",
+        "description": "A recent scientific study suggests that moderate chocolate consumption may have unexpected health benefits, challenging previous assumptions about its impact.",
+        "category": "Health",
+        "author": "Alex Johnson",
+        "published_at": "2024-02-05T15:20:00Z"
+      },
+      {
+        "title": "Sports Update: Exciting Results in International Championship",
+        "description": "In a thrilling competition, the underdog team emerged victorious in the international championship, surprising fans and analysts alike.",
+        "category": "Sports",
+        "author": "David Williams",
+        "published_at": "2024-02-05T18:10:00Z"
+      }
+    ]
+  }
+  
