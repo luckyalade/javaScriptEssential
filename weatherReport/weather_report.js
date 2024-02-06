@@ -24,27 +24,3 @@ function showweatherDetails(event) {
 document.getElementById('weatherForm').addEventListener('submit',showweatherDetails );
 
 
-<h1>Detailed Weather Report</h1>
-function showDetailedWeatherForcast(e) {
-    e.preventDefault();
-
-    const lon = document.getElementById('lon').value;
-    const lat = document.getElementById('lat').value;
-    const apiKey = '70c07c056fc1b29ee58112da79699a71'; // Replace 'YOUR_API_KEY' with your actual API key
-    const apiAddress = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`;
-
-    fetch(apiAddress)
-        .then(response => response.json())
-        .then(data => {
-            const detailedWeatherInfo = document.getElementById('detailedWeatherInfo');
-            detailedWeatherInfo.innerHTML = `<h2>Weather in ${data.lat}, ${data.lon}</h2>`;
-            // Add more details based on the data received
-        })
-        .catch(error => {
-            console.error('Error fetching detailed weather:', error);
-            const detailedWeatherInfo = document.getElementById('detailedWeatherInfo');
-            detailedWeatherInfo.innerHTML = `<p>Failed to fetch detailed weather. Please try again.</p>`;
-        });
-}
-
-document.getElementById('detailedWeatherForm').addEventListener('submit', showDetailedWeatherForcast);
